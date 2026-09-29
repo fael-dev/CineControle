@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de filmes | CineControle</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b42336'/%3E%3Cpath d='M12 8L24 16L12 24Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css?v=4">
+</head>
+<body>
+  <header class="menu"><nav class="container" aria-label="Menu principal">
+    <a class="marca" href="index.html">Cine<span>Controle</span></a>
+    <div class="nav"><a class="nav-link " href="index.html">Início</a><a class="nav-link active" aria-current="page" href="cadastro-filmes.html">Filmes</a><a class="nav-link " href="cadastro-salas.html">Salas</a><a class="nav-link " href="cadastro-sessoes.html">Cadastrar sessão</a><a class="nav-link " href="venda-ingressos.html">Vender ingresso</a><a class="nav-link " href="sessoes.html">Sessões disponíveis</a></div>
+  </nav></header>
+  <main class="container py-4">
+    <h1 class="mb-4">Cadastro de filmes</h1>
+    <div id="mensagem" role="status" aria-live="polite" hidden></div>
+    <form id="formulario" class="painel formulario-grid"><div class="mb-3 campo-largo"><label for="titulo" class="form-label">Título</label><input class="form-control" id="titulo" name="titulo" type="text"  required></div><div class="mb-3"><label for="genero" class="form-label">Gênero</label><input class="form-control" id="genero" name="genero" type="text"  required></div><div class="mb-3 campo-largo"><label for="descricao" class="form-label">Descrição</label><textarea id="descricao" class="form-control" rows="3" required></textarea></div><div class="mb-3"><label for="classificacao" class="form-label">Classificação indicativa</label><select class="form-select" id="classificacao" name="classificacao" required><option value="">Selecione...</option><option>Livre</option><option>10 anos</option><option>12 anos</option><option>14 anos</option><option>16 anos</option><option>18 anos</option></select></div><div class="mb-3"><label for="duracao" class="form-label">Duração (minutos)</label><input class="form-control" id="duracao" name="duracao" type="number" min="1" step="1" required></div><div class="mb-3"><label for="estreia" class="form-label">Data de estreia</label><input class="form-control" id="estreia" name="estreia" type="date"  required></div><button type="submit" class="btn btn-primary acao-formulario">Salvar filme</button></form><section class="mt-4"><h2>Filmes cadastrados</h2><ul id="lista" class="list-group"></ul></section>
+  </main>
+  <footer class="container py-4 text-secondary">CineControle · Sistema de controle de cinema</footer>
+  <script src="js/comum.js"></script>
+  <script src="js/filmes.js"></script>
+</body>
+</html>

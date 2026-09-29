@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de sessões | CineControle</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b42336'/%3E%3Cpath d='M12 8L24 16L12 24Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css?v=4">
+</head>
+<body>
+  <header class="menu"><nav class="container" aria-label="Menu principal">
+    <a class="marca" href="index.html">Cine<span>Controle</span></a>
+    <div class="nav"><a class="nav-link " href="index.html">Início</a><a class="nav-link " href="cadastro-filmes.html">Filmes</a><a class="nav-link " href="cadastro-salas.html">Salas</a><a class="nav-link active" aria-current="page" href="cadastro-sessoes.html">Cadastrar sessão</a><a class="nav-link " href="venda-ingressos.html">Vender ingresso</a><a class="nav-link " href="sessoes.html">Sessões disponíveis</a></div>
+  </nav></header>
+  <main class="container py-4">
+    <h1 class="mb-4">Cadastro de sessões</h1>
+    <div id="mensagem" role="status" aria-live="polite" hidden></div>
+    <p>Escolha um filme e uma sala já cadastrados.</p><form id="formulario" class="painel formulario-grid"><div class="mb-3 campo-largo"><label for="filme" class="form-label">Filme</label><select class="form-select" id="filme" name="filme" required><option value="">Selecione...</option></select></div><div class="mb-3 campo-largo"><label for="sala" class="form-label">Sala</label><select class="form-select" id="sala" name="sala" required><option value="">Selecione...</option></select></div><div class="mb-3"><label for="dataHora" class="form-label">Data e hora</label><input class="form-control" id="dataHora" name="dataHora" type="datetime-local"  required></div><div class="mb-3"><label for="preco" class="form-label">Preço (R$)</label><input class="form-control" id="preco" name="preco" type="number" min="0.01" step="0.01" required></div><div class="mb-3"><label for="idioma" class="form-label">Idioma</label><select class="form-select" id="idioma" name="idioma" required><option value="">Selecione...</option><option>Dublado</option><option>Legendado</option></select></div><div class="mb-3"><label for="formato" class="form-label">Formato</label><select class="form-select" id="formato" name="formato" required><option value="">Selecione...</option><option>2D</option><option>3D</option></select></div><button type="submit" class="btn btn-primary acao-formulario">Salvar sessão</button></form>
+  </main>
+  <footer class="container py-4 text-secondary">CineControle · Sistema de controle de cinema</footer>
+  <script src="js/comum.js"></script>
+  <script src="js/cadastro-sessoes.js"></script>
+</body>
+</html>

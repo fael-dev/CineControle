@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de salas | CineControle</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b42336'/%3E%3Cpath d='M12 8L24 16L12 24Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css?v=4">
+</head>
+<body>
+  <header class="menu"><nav class="container" aria-label="Menu principal">
+    <a class="marca" href="index.html">Cine<span>Controle</span></a>
+    <div class="nav"><a class="nav-link " href="index.html">Início</a><a class="nav-link " href="cadastro-filmes.html">Filmes</a><a class="nav-link active" aria-current="page" href="cadastro-salas.html">Salas</a><a class="nav-link " href="cadastro-sessoes.html">Cadastrar sessão</a><a class="nav-link " href="venda-ingressos.html">Vender ingresso</a><a class="nav-link " href="sessoes.html">Sessões disponíveis</a></div>
+  </nav></header>
+  <main class="container py-4">
+    <h1 class="mb-4">Cadastro de salas</h1>
+    <div id="mensagem" role="status" aria-live="polite" hidden></div>
+    <form id="formulario" class="painel formulario-grid"><div class="mb-3 campo-largo"><label for="nome" class="form-label">Nome da sala</label><input class="form-control" id="nome" name="nome" type="text"  required></div><div class="mb-3"><label for="capacidade" class="form-label">Capacidade</label><input class="form-control" id="capacidade" name="capacidade" type="number" min="1" step="1" required></div><div class="mb-3"><label for="tipo" class="form-label">Tipo</label><select class="form-select" id="tipo" name="tipo" required><option value="">Selecione...</option><option>2D</option><option>3D</option><option>IMAX</option></select></div><button type="submit" class="btn btn-primary acao-formulario">Salvar sala</button></form><section class="mt-4"><h2>Salas cadastradas</h2><ul id="lista" class="list-group"></ul></section>
+  </main>
+  <footer class="container py-4 text-secondary">CineControle · Sistema de controle de cinema</footer>
+  <script src="js/comum.js"></script>
+  <script src="js/salas.js"></script>
+</body>
+</html>

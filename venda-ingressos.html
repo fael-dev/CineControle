@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Venda de ingressos | CineControle</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23b42336'/%3E%3Cpath d='M12 8L24 16L12 24Z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css?v=4">
+</head>
+<body>
+  <header class="menu"><nav class="container" aria-label="Menu principal">
+    <a class="marca" href="index.html">Cine<span>Controle</span></a>
+    <div class="nav"><a class="nav-link " href="index.html">Início</a><a class="nav-link " href="cadastro-filmes.html">Filmes</a><a class="nav-link " href="cadastro-salas.html">Salas</a><a class="nav-link " href="cadastro-sessoes.html">Cadastrar sessão</a><a class="nav-link active" aria-current="page" href="venda-ingressos.html">Vender ingresso</a><a class="nav-link " href="sessoes.html">Sessões disponíveis</a></div>
+  </nav></header>
+  <main class="container py-4">
+    <h1 class="mb-4">Venda de ingressos</h1>
+    <div id="mensagem" role="status" aria-live="polite" hidden></div>
+    <form id="formulario" class="painel formulario-grid"><div class="mb-3 campo-largo"><label for="sessao" class="form-label">Sessão</label><select class="form-select" id="sessao" name="sessao" required><option value="">Selecione...</option></select></div><div class="mb-3 campo-largo"><label for="cliente" class="form-label">Nome do cliente</label><input class="form-control" id="cliente" name="cliente" type="text"  required></div><div class="mb-3"><label for="cpf" class="form-label">CPF</label><input class="form-control" id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" required></div><div class="mb-3"><label for="assento" class="form-label">Assento</label><input class="form-control" id="assento" name="assento" type="text" placeholder="Ex.: A10" maxlength="10" pattern="[A-Za-z]+[1-9][0-9]*" title="Use uma letra e um número, como A10" required></div><div class="mb-3"><label for="pagamento" class="form-label">Tipo de pagamento</label><select class="form-select" id="pagamento" name="pagamento" required><option value="">Selecione...</option><option>Cartão</option><option>Pix</option><option>Dinheiro</option></select></div><button type="submit" class="btn btn-primary acao-formulario">Confirmar venda</button></form>
+  </main>
+  <footer class="container py-4 text-secondary">CineControle · Sistema de controle de cinema</footer>
+  <script src="js/comum.js"></script>
+  <script src="js/ingressos.js"></script>
+</body>
+</html>
